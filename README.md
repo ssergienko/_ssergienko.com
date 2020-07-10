@@ -1,2 +1,0 @@
-# ssergienko.com
-own site
