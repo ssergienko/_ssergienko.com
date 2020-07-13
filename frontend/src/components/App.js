@@ -2,53 +2,42 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import Header from '/Users/ssergienko/Library/Mobile Documents/com~apple~CloudDocs/Projects/ssergienko.com/frontend/src/components/Header';
 import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Home from './Home';
+import Projects from "./Projects";
+import Contacts from "./Contacts";
+import Education from './Eductaion';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: [],
-      loaded: false,
-      placeholder: "Loading"
-    };
-  }
-
-  componentDidMount() {
-    fetch("api/project")
-      .then(response => {
-        if (response.status > 400) {
-          return this.setState(() => {
-            return { placeholder: "Something went wrong!" };
-          });
-        }
-        return response.json();
-      })
-      .then(data => {
-        this.setState(() => {
-          return {
-            data,
-            loaded: true
-          };
-        });
-      });
   }
 
   render() {
     return (
-      <>
+      <Router>
         <Header />
         <div className="container-fluid">
-          <ul>
-            {this.state.data.map(contact => {
-              return (
-                <li key={contact.id}>
-                  {contact.title} - {contact.description}
-                </li>
-              );
-            })}
-          </ul>
+           <Switch>
+            <Route path="/projects">
+              <Projects />
+            </Route>
+            <Route path="/education">
+              <Education />
+            </Route>
+            <Route path="/contacts">
+              <Contacts />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
-      </>
+      </Router>
     );
   }
 }

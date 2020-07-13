@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import './styles.scss';
+import {
+  NavLink
+} from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -14,16 +17,16 @@ class Header extends Component {
         <nav className="topmenu navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">Home</a>
-            </li>
-            <li className="nav-item active">
-              <a className="nav-link" href="/projects/">Projects</a>
+              <NavLink className="nav-link" to="/" activeClassName="active" exact>Home</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/education">Edication</a>
+              <NavLink className="nav-link" to="/projects" activeClassName="active">Projects</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contacts">Contacts</a>
+              <NavLink className="nav-link" to="/education" activeClassName="active">Education</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/contacts" activeClassName="active">Contacts</NavLink>
             </li>
           </ul>
         </nav>
