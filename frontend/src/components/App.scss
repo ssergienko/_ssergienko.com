@@ -1,3 +1,15 @@
+@import './global.scss';
+
 html, body {
+  height: 100%;
+  margin: 0;
   font-size: 24px;
+}
+.container-wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+}
+
+.footer, .push {
+  height: $footer-height;
 }

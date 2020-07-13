@@ -11,6 +11,7 @@ import Home from './Home';
 import Projects from "./Projects";
 import Contacts from "./Contacts";
 import Education from './Eductaion';
+import Footer from './Footer';
 
 class App extends Component {
   constructor(props) {
@@ -20,23 +21,27 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Header />
-        <div className="container-fluid">
-           <Switch>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/education">
-              <Education />
-            </Route>
-            <Route path="/contacts">
-              <Contacts />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+        <div className="container-wrapper">
+          <Header />
+          <div className="container-fluid">
+            <Switch>
+              <Route path="/projects">
+                <Projects />
+              </Route>
+              <Route path="/education">
+                <Education />
+              </Route>
+              <Route path="/contacts">
+                <Contacts />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+          <div className="push"></div>
         </div>
+        <Footer />
       </Router>
     );
   }

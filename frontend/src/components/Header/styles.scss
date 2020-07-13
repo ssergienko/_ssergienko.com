@@ -1,9 +1,15 @@
 @import '../global.scss';
 
 h6 {
-  color: $white;
   padding: 24px 0 0;
   margin-bottom: 0;
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
 }
 
 

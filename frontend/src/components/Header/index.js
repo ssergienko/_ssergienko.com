@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import './styles.scss';
 import {
-  NavLink
+  NavLink,
+  Link
 } from "react-router-dom";
 
 class Header extends Component {
@@ -12,7 +13,9 @@ class Header extends Component {
   render() {
     return (
       <div className="site-logo bg-dark text-center">
-        <h6 className="align-center">SERGEI S. SERGIENKO</h6>
+        <h6 className="align-center">
+          <Link to="/">SERGEI S. SERGIENKO</Link>
+        </h6>
 
         <nav className="topmenu navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
           <ul className="navbar-nav">
