@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import Header from '/Users/ssergienko/Library/Mobile Documents/com~apple~CloudDocs/Projects/ssergienko.com/frontend/src/components/Header';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {
@@ -33,15 +35,20 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.data.map(contact => {
-          return (
-            <li key={contact.id}>
-              {contact.title} - {contact.description}
-            </li>
-          );
-        })}
-      </ul>
+      <>
+        <Header />
+        <div className="container-fluid">
+          <ul>
+            {this.state.data.map(contact => {
+              return (
+                <li key={contact.id}>
+                  {contact.title} - {contact.description}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </>
     );
   }
 }

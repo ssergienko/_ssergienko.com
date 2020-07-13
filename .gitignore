@@ -1,7 +1,8 @@
-lib/
-bin/
-
-__pycache__/
-*.py[cod]
-
-node_modules/
+venv
+**/*.pyc
+**/__pycache__
+db.sqlite3
+node_modules
+build
+static
+package-lock.json
