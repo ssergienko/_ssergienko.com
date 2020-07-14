@@ -9,11 +9,13 @@
     font-size: $font-size-small;
   }
   .social-networks {
-    text-align: center;
-    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     a {
       color: $white;
-      padding: 0 8px;
+      padding: 0 4px;
     }
   }
 }

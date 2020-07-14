@@ -19,6 +19,21 @@
       padding-left: $indent-small;
     }
   }
+  .customers-wrapper {
+    h6 { display: block; text-align: center; }
+    .customers {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .customer {
+        img {
+          width: 120px;
+          height: 60px;
+        }
+      }
+    }
+  }
+  
 }
 
 @media only screen 
@@ -34,7 +49,7 @@ and (orientation : portrait) {
       }
     }
     .homepage-content {
-      margin: 32px 0;
+      margin-top: 32px;
     }
   }
 }

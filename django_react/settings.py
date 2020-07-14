@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # components
     'projects.apps.ProjectsConfig',
+    'customers.apps.CustomersConfig',
 
     # framework
     'rest_framework',

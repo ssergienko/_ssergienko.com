@@ -4,6 +4,31 @@ import './styles.scss';
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      customers: [],
+      loaded: false,
+      placeholder: "Loading"
+    };
+  }
+
+  componentDidMount() {
+    fetch("api/customer")
+      .then(response => {
+        if (response.status > 400) {
+          return this.setState(() => {
+            return { placeholder: "Something went wrong!" };
+          });
+        }
+        return response.json();
+      })
+      .then(customers => {
+        this.setState(() => {
+          return {
+            customers,
+            loaded: true
+          };
+        });
+      });
   }
 
   render() {
@@ -11,7 +36,7 @@ class Home extends Component {
       <div className="homepage-content-wrapper">
         <div className="row">
           <div className="sidebar col-sm-12 col-md-2">
-            <img className="avatar" src="https://s3.amazonaws.com/ssergienko.com/images/myself.jpeg" />
+            <img className="avatar" src="https://s3.amazonaws.com/ssergienko.com/images/myself.png" />
           </div>
           <div className="homepage-content col-sm-12 col-md-10">
             <h6 className="subtitle">Technical Product Manager</h6>
@@ -32,15 +57,6 @@ class Home extends Component {
                   <li>Successfull projects in the World’s Biggest IT Companies</li>
                 </ul>
               </div>
-              {/* <div className="tile">
-                <h6 className="subtitle">Strengths</h6>
-                <ul>
-                  <li>POC and MVP</li>
-                  <li>Concept Formalization through research and negotiations</li>
-                  <li>Organization of smooth and transparent delivery</li>
-                  <li>Fluent English speaker </li>
-                </ul>
-              </div> */}
               <div className="tile col-sm-6 col-md-6">
                 <h6 className="subtitle">Functional Skill Set</h6>
                 <ul>
@@ -51,8 +67,21 @@ class Home extends Component {
                 </ul>
               </div>
             </div>
-            <h6 className="subtitle">Customers</h6>
-            <div className="customers"></div>
+            
+            <hr />
+
+            <div className="customers-wrapper">
+              {/* <h6 className="subtitle">Customers</h6> */}
+              <div className="customers">
+                {this.state.customers.map(customer => {
+                  return (
+                    <div key={customer.id} className="customer">
+                      <img src={customer.logoUrl} />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
