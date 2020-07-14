@@ -23,7 +23,7 @@ class App extends Component {
       <Router>
         <div className="container-wrapper">
           <Header />
-          <div className="container-fluid">
+          <div className="container-fluid page">
             <Switch>
               <Route path="/projects">
                 <Projects />

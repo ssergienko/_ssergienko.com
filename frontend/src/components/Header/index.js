@@ -12,7 +12,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="site-logo bg-dark text-center">
+      <div className="header bg-dark text-center">
         <h6 className="align-center">
           <Link to="/">SERGEI S. SERGIENKO</Link>
         </h6>

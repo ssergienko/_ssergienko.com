@@ -1,6 +1,19 @@
 @import '../global.scss';
 
 .footer {
-  height: $footer-height;
+  color: $white;
+  // height: $footer-height;
   background-color: $gray;
+  text-align: center;
+  .copyright {
+    font-size: $font-size-small;
+  }
+  .social-networks {
+    text-align: center;
+    padding: 24px;
+    a {
+      color: $white;
+      padding: 0 8px;
+    }
+  }
 }

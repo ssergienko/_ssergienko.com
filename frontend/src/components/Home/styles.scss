@@ -1,0 +1,40 @@
+@import '../global.scss';
+
+.homepage-content-wrapper {
+  .sidebar {
+    .avatar {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .homepage-content {
+    h6 {
+      padding-top: 0;
+      font-weight: 400;
+      &.subtitle {
+        font-weight: 600;
+      }
+    }
+    ul {
+      padding-left: $indent-small;
+    }
+  }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { 
+  .homepage-content-wrapper {
+    .sidebar {
+      .avatar {
+        min-width: 100%;
+	      height: auto;
+      }
+    }
+    .homepage-content {
+      margin: 32px 0;
+    }
+  }
+}
