@@ -57,17 +57,17 @@ class Home extends Component {
                 <ul>
                   <li>Web Development since 2007</li>
                   {/* <li>Product Management since the beginning</li> */}
-                  <li>strong UI/UX Design capabilities</li>
+                  <li>Strong UI/UX Design capabilities</li>
                   <li>Senior Level of Software Development</li>
-                  <li>Successfull projects in the World’s Biggest IT Companies</li>
+                  <li>Successfull projects for the World’s Biggest IT Companies</li>
                 </ul>
               </div>
               <div className="tile col-sm-6 col-md-6">
                 <h6 className="subtitle">Functional Skill Set</h6>
                 <ul>
                   <li>Web Design, UX, Mockups and Prototyping</li>
-                  <li>design of optimal Technical Solutions</li>
-                  <li>organization of smooth and transparent Delivery</li>
+                  <li>Design of optimal Technical Solutions</li>
+                  <li>Organization of smooth and transparent Delivery</li>
                   <li>Estimations, Roadmaps, appropriate level of Reporting</li>
                 </ul>
               </div>
