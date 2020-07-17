@@ -1,17 +1,27 @@
 import React, { Component } from "react";
+import './styles.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+  Redirect
+} from "react-router-dom";
+import Project from './Project';
 
 class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      projectsList: [],
+      currentProjectId: null,
       loaded: false,
       placeholder: "Loading"
     };
   }
 
   componentDidMount() {
-    fetch("api/project")
+    fetch("/api/project")
       .then(response => {
         if (response.status > 400) {
           return this.setState(() => {
@@ -20,10 +30,10 @@ class Projects extends Component {
         }
         return response.json();
       })
-      .then(data => {
+      .then(projects => {
         this.setState(() => {
           return {
-            data,
+            projectsList: projects,
             loaded: true
           };
         });
@@ -32,15 +42,29 @@ class Projects extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.data.map(contact => {
-          return (
-            <li key={contact.id}>
-              {contact.title} - {contact.description}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="projects-content-wrapper">
+        <div className="row">
+          <div className="sidebar col-sm-12 col-md-2">
+            <ul>
+              {this.state.projectsList.map(project => {
+                return (
+                  <li key={project.id}>
+                    <NavLink exact to={`/projects/${project.id}`}>{project.title}</NavLink>
+                  </li>
+                );
+              })}
+            </ul> 
+          </div>
+          <div className="projects-content col-sm-12 col-md-10">
+              <Route exact path="/projects">
+              {this.state.projectsList.length > 0 && <Redirect to={`/projects/${this.state.projectsList[0].id}`} />}
+              </Route>
+              <Route exact path="/projects/:id">
+                {this.state.projectsList.length > 0 && <Project projects={this.state.projectsList} />}
+              </Route>
+          </div>
+        </div>
+      </div>
     );
   }
 }

@@ -1,0 +1,21 @@
+@import '../global.scss';
+
+.projects-content-wrapper {
+  .sidebar {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      a {
+        color: $gray;
+        text-decoration: underline;
+        &.active {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .projects-content {
+    
+  }
+}
