@@ -2,6 +2,7 @@
 
 .projects-content-wrapper {
   .sidebar {
+    margin-bottom: $indent-small;
     ul {
       list-style-type: none;
       padding: 0;
@@ -10,7 +11,7 @@
         color: $gray;
         text-decoration: underline;
         &.active {
-          font-weight: 600;
+          font-weight: $font-weight-bold;
         }
       }
     }
