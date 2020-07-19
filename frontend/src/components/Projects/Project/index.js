@@ -11,7 +11,12 @@ class Project extends Component {
     let currentProject = this.props.projects.find((project) => project.id === +this.props.match.params.id);
     return (
       <div className="project">
-        {currentProject && currentProject.description}
+        {currentProject && 
+          <>
+            <h6>{currentProject.role}</h6>
+            <p>{currentProject.description}</p>
+          </>
+        }
       </div>
     );
   }

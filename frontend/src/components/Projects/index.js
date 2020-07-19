@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import './styles.scss';
 import {
-  BrowserRouter as Router,
-  Switch,
   Route,
   NavLink,
   Redirect
@@ -14,7 +12,6 @@ class Projects extends Component {
     super(props);
     this.state = {
       projectsList: [],
-      currentProjectId: null,
       loaded: false,
       placeholder: "Loading"
     };
