@@ -9,4 +9,7 @@
     font-weight: $font-weight-bold;
     margin-right: $indent-xsmall;
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

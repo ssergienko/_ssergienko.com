@@ -5,6 +5,12 @@ html, body {
   margin: 0;
   font-size: $font-size-normal;
 }
+p, ul li {
+  font-size: $font-size-normal;
+}
+nav a {
+  font-size: $font-size-normal;
+}
 .container-wrapper {
   min-height: 100%;
   margin-bottom: -$footer-height;

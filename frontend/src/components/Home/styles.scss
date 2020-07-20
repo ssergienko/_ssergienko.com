@@ -24,7 +24,10 @@
     }
   }
   .customers-wrapper {
-    h6 { display: block; text-align: center; }
+    h6 {
+      display: block;
+      text-align: center;
+    }
     .customers {
       display: flex;
       justify-content: space-between;

@@ -40,7 +40,7 @@ class Home extends Component {
               <img className="avatar" src="https://s3.amazonaws.com/ssergienko.com/images/myself.png" />
             </div>
             <div className="download-cv-link">
-              <a href="https://s3.amazonaws.com/ssergienko.com/images/SergeySSergienko.CV.pdf" target="_blank">Download CV [PDF]</a>
+              <a href="https://s3.amazonaws.com/ssergienko.com/images/SergeySSergienko.CV.pdf" target="_blank">Download CV</a>
               </div>
           </div>
           <div className="homepage-content col-sm-12 col-md-10">
@@ -59,7 +59,7 @@ class Home extends Component {
                   {/* <li>Product Management since the beginning</li> */}
                   <li>Strong UI/UX Design capabilities</li>
                   <li>Senior Level of Software Development</li>
-                  <li>Successfull projects for the World’s Biggest IT Companies</li>
+                  <li>Successful projects for the World’s Biggest Companies</li>
                 </ul>
               </div>
               <div className="tile col-sm-6 col-md-6">

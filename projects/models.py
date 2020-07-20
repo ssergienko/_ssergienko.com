@@ -9,3 +9,8 @@ class Project(models.Model):
     location = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+class ProjectImage(models.Model):
+    project = models.ForeignKey(Project, default=None, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/')
+
