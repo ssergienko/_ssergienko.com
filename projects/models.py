@@ -9,6 +9,11 @@ class Project(models.Model):
     location = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    order = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        ordering = ['order']
+
 
 class ProjectImage(models.Model):
     project = models.ForeignKey(Project, default=None, on_delete=models.CASCADE)
