@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Education, EducationDocument #, EducationCategory
+from .models import Education, EducationDocument, EducationCategory
 
 
 class EducationDocumentAdmin(admin.StackedInline):
@@ -14,9 +14,6 @@ class EducationAdmin(admin.ModelAdmin):
     model = Education
 
 
-# @admin.register(EducationCategory)
-# class EducationCategoryAdmin(admin.ModelAdmin):
-#   inlines = [EducationDocumentAdmin]
-
-#   class Meta:
-#     model = EducationCategory
+@admin.register(EducationCategory)
+class EducationCategoryAdmin(admin.ModelAdmin):
+  pass
