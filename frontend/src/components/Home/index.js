@@ -37,7 +37,7 @@ class Home extends Component {
         <div className="row">
           <div className="sidebar col-sm-12 col-md-2">
             <div>
-              <img className="avatar" src="https://s3.amazonaws.com/ssergienko.com/images/myself.png" />
+              <img className="avatar" src="/media/images/general/myselfstrate.png" />
             </div>
             <div className="download-cv-link">
               <a href="https://s3.amazonaws.com/ssergienko.com/images/SergeySSergienko.CV.pdf" target="_blank">Download CV</a>

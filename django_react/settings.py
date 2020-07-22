@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # components
     'projects.apps.ProjectsConfig',
     'customers.apps.CustomersConfig',
+    'sssiteimages.apps.SSSiteimagesConfig',
 
     # framework
     'rest_framework',
