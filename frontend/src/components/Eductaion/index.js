@@ -34,19 +34,32 @@ class Eductaion extends Component {
     console.log('educations: ', this.state.educations);
     return (
       <div className="education">
-        <h6>Saint-Petersburg State University of Aerospace Instrumentation in Russia</h6>
-        <p>Master Degree in Software</p>
-        <p>
-          <a href="https://s3.amazonaws.com/ssergienko.com/images/Sergienko+(Diploma).pdf" target="_blank">Diploma</a>
-          &nbsp;/&nbsp;
-          <a href="https://s3.amazonaws.com/ssergienko.com/images/Sergienko+(Transcript).pdf" target="_blank">Transcript</a>
-        </p>
-        <hr />
-        <h6>Communication Strategies for a Virtual Age by University of Toronto on Coursera</h6>
-        <p><a href="https://s3.amazonaws.com/ssergienko.com/images/Coursera+EXFRERDAJPCC.pdf" target="_blank">Certificate</a></p>
-        <hr />
-        <h6>IELTS 6.5</h6>
-        <p><a href="https://s3.amazonaws.com/ssergienko.com/images/IELTS_2019.pdf" target="_blank">Certificate</a></p>
+        {this.state.educations.map((education) => {
+          return (
+            <>
+              <div className="row">
+                <div className="logo col-md-1 col-sm-12">
+                  <img src={education.logo} />
+                </div>
+                <div className="description col-md-11 col-sm-12">
+                  <h6>{education.title}</h6>
+                  <p>{education.description}</p>
+                  <p className="documents">
+                    {education.documents.map((document, index) => {
+                      return (
+                        <>
+                          <a href={document.document} target="_blank">{document.title}</a>
+                          {education.documents.length > 1 && education.documents.length - 1 !== index && ` / `}
+                        </> )
+                    })}
+                  </p>
+                </div>
+                <div className="logo col-md-1 col-sm-12">{document.finishedAt}</div>
+              </div>
+              <hr />
+            </>
+          )})
+        }
       </div>
     );
   }
