@@ -6,7 +6,7 @@ class EducationCategory(models.Model):
 
 
 class Education(models.Model):
-    educationCategory = models.ForeignKey(EducationCategory, on_delete=models.CASCADE)
+    categoryId = models.ForeignKey(EducationCategory, on_delete=models.CASCADE)
     title = models.CharField(max_length=100, blank=False, null=False)
     finishedAt = models.DateTimeField(blank=True, null=True)
     description = models.CharField(max_length=100, blank=True, null=True)

@@ -14,4 +14,4 @@ class EducationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Education
-        fields = ('id', 'title', 'logo', 'description', 'documents', 'finishedAt')
+        fields = ('id', 'title', 'logo', 'description', 'documents', 'categoryId', 'finishedAt')
