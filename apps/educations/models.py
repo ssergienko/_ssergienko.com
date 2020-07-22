@@ -1,7 +1,12 @@
 from django.db import models
 
 
+# class EducationCategory(models.Model):
+#     title = models.CharField(max_length=100, blank=False, null=False)
+
+
 class Education(models.Model):
+    # educationCategoryId = models.ForeignKey(EducationCategory, related_name='education', default=1, on_delete=models.CASCADE)
     title = models.CharField(max_length=100, blank=False, null=False)
     finishedAt = models.DateTimeField(blank=True, null=True)
     description = models.CharField(max_length=100, blank=True, null=True)

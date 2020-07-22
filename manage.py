@@ -3,6 +3,9 @@
 import os
 import sys
 
+# from django.conf import settings
+
+# sys.path.append(os.path.join("django_react", "apps"))
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_react.settings')
