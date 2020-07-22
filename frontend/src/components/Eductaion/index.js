@@ -4,9 +4,34 @@ import './styles.scss';
 class Eductaion extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      educations: [],
+      loaded: false,
+      placeholder: "Loading"
+    };
+  }
+  componentDidMount() {
+    fetch("/api/education")
+      .then(response => {
+        if (response.status > 400) {
+          return this.setState(() => {
+            return { placeholder: "Something went wrong!" };
+          });
+        }
+        return response.json();
+      })
+      .then(educations => {
+        this.setState(() => {
+          return {
+            educations: educations,
+            loaded: true
+          };
+        });
+      });
   }
 
   render() {
+    console.log('educations: ', this.state.educations);
     return (
       <div className="education">
         <h6>Saint-Petersburg State University of Aerospace Instrumentation in Russia</h6>

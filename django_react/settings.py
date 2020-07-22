@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'projects.apps.ProjectsConfig',
     'customers.apps.CustomersConfig',
     'sssiteimages.apps.SSSiteimagesConfig',
+    'educations.apps.EducationsConfig',
 
     # framework
     'rest_framework',
