@@ -81,7 +81,7 @@ class Home extends Component {
                 {this.state.customers.map(customer => {
                   return (
                     <div key={customer.id} className="customer">
-                      <img src={customer.logoUrl} />
+                      <img src={customer.logo} />
                     </div>
                   );
                 })}

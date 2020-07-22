@@ -12,4 +12,13 @@
   p:last-child {
     margin-bottom: 0;
   }
+  .slides {
+    img {
+      width: 100%;
+      margin: $indent-small 0;
+    }
+    img:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

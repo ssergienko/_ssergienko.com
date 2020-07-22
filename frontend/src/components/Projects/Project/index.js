@@ -21,6 +21,9 @@ class Project extends Component {
               <li><span className="row-title">Location:</span>{currentProject.location}</li>
             </ul>
             <p>{currentProject.description}</p>
+            <p className="slides">
+              {currentProject.images.map((image) => <img src={image.image} key={image.id} />)}
+            </p>
           </div>    
         }
       </>
