@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Header from '/Users/ssergienko/Library/Mobile Documents/com~apple~CloudDocs/Projects/ssergienko.com/frontend/src/components/Header';
+import Header from './Header';
 import './App.scss';
 import {
   BrowserRouter as Router,
