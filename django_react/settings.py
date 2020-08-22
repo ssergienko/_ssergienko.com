@@ -143,7 +143,7 @@ REST_FRAMEWORK = {
     )
 }
 
-STATIC_URL = '/frontend/static/'
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, STATIC_URL), '/home/bitnami/apps/django/django_projects/ssergienko.com/frontend/static',
-)
+# STATIC_URL = '/frontend/static/'
+# STATICFILES_DIRS = (
+#   os.path.join(BASE_DIR, STATIC_URL), '/home/bitnami/apps/django/django_projects/ssergienko.com/frontend/static',
+# )
