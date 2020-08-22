@@ -4,6 +4,4 @@ venv
 db.sqlite3
 node_modules
 build
-static
 package-lock.json
-frontend/static/frontend/main.js
