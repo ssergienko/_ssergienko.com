@@ -17,7 +17,7 @@ class Footer extends Component {
           <a href="https://www.instagram.com/sergey.s.sergienko/" target="_blank"><FaInstagram size="1em" /></a>
           <a href="https://www.linkedin.com/sergey.s.sergienko" target="_blank"><FaLinkedin size="1em" /></a>
           <a href="https://soundcloud.com/ssergienko" target="_blank"><FaSoundcloud size="1.5em" /></a>
-          <a href="https://www.facebook.com/sergey.s.sergienko" target="_blank"><FaFacebookSquare size="1em" /></a>
+          <a href="https://www.facebook.com/ssergienko" target="_blank"><FaFacebookSquare size="1em" /></a>
           <a href="https://www.youtube.com/channel/UCeUltXEeBeuD-Ah2DhJtTOQ" target="_blank"><RiYoutubeLine size="1em" /></a>
         </div>
       </div>
