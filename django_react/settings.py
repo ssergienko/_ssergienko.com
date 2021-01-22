@@ -28,7 +28,7 @@ SECRET_KEY = '6sh1n#uw9=!g7#a@9mxbs1*$ei14rm)ypaplbw&1-9nc5y%$ce'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '3.231.214.70', 'localhost', 'ssergienko.com', 'ssergienko.ru'
+    '3.231.214.70', 'localhost', 'ssergienko.com', 'ssergienko.ru', '127.0.0.1'
 ]
 
 
