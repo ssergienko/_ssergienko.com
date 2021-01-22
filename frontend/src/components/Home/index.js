@@ -48,22 +48,19 @@ class Home extends Component {
             <p>
               The best thing I ever learned is how to build Web Applications. Started as a Software Engineer in 2007, I made a long
               way from Junior Engineer to Lead, Head of UI, Entrepreneur and TPM in a list of different companies from all around
-              the world. There were tops, big and small, product and outsource, startups and enterprise, off-shore and on-side. After all
-              these years I know a lot about how the business works and learned what people expect when they invest money into a Web Project.
+              the world. There were tops, big and small companies, product and outsource, startups and enterprise, off-shore and on-side. After all
+              these years I knew how the business works and what people usually expect when they invest money into a Web Project.
             </p>
             <p>
-              I learned how to turn a business idea into a Concept, estimate Effort, determine Costs and Risks, create Create Prototype
-              or even MVP. I believe that the best technical solutions could be made only by a group of connected people. I can help 
+              I learned how to turn a business idea into a Concept, estimate Effort, determine Costs and Risks, Create Prototype
+              or MVP. I believe that the best technical solutions could be made only by a group of connected people. I can 
               Staff a successful Team, organize Efficient Development Process and Smooth Delivery.
             </p>
             <p>
-              By nature I'm getting on with people well, but engineering is tough. Master Degree in Software helps me to stay on a same
+              By nature I'm getting on with people well, but engineering is a tough guy. Master Degree in Software helps me to stay on a same
               page with engineers, when the natural sociability and knowledge of business processes allows me to Connect those worlds in one.
             </p>
-            <p>
-              If you have an idea and don't know where to start from, or you are looking for somebody who can sort things out, go ahead and  
-              <a href="mailto:sergei.s.sergienko@gmail.com">text me</a>. Let's get your project to a big win!
-            </p>
+
             <div className="tiles-wrapper row">
               <div className="tile col-sm-6 col-md-6">
                 <h6 className="subtitle">Highlights</h6>
@@ -78,10 +75,11 @@ class Home extends Component {
               <div className="tile col-sm-6 col-md-6">
                 <h6 className="subtitle">Functional Skill Set</h6>
                 <ul>
-                  <li>Delivery</li>
+                  <li>Delivery and Reporting</li>
                   <li>Resource Management and Staffing</li>
                   <li>Design of Technical Solutions</li>
                   <li>Demo and Presentations</li>
+                  <li>Communication between Business and Technicals</li>
                 </ul>
               </div>
             </div>
