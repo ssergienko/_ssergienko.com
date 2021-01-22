@@ -31,7 +31,6 @@ class Eductaion extends Component {
   }
 
   render() {
-    console.log('educations: ', this.state.educations);
     return (
       <div className="education">
         {this.state.educations.map((education) => {
