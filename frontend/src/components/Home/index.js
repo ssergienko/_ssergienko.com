@@ -39,9 +39,9 @@ class Home extends Component {
             <div>
               <img className="avatar" src="/media/images/general/myselfstrate.png" />
             </div>
-            {/* <div className="download-cv-link">
-              <a href="https://s3.amazonaws.com/ssergienko.com/images/SergeySSergienko.CV.pdf" target="_blank">Download CV</a>
-            </div> */}
+            <div className="download-cv-link">
+              <a href="https://s3.amazonaws.com/ssergienko.com/images/SergeySSergienko.pdf" target="_blank">Download CV</a>
+            </div>
           </div>
           <div className="homepage-content col-sm-12 col-md-10">
             <h6 className="subtitle">Technical Product Manager</h6>
