@@ -1,2 +1,2 @@
 # ssergienko.com
-my site
+react + django + amplify
